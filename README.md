@@ -1,5 +1,12 @@
 # Logs Analysis Project
 
+- [Intro](#intro)
+- [Database](#the-database-overview)
+- [Implementation](#implementation-of-the-project)
+- [Dependencies](#dependencies-built-with)
+- [How to run it](#how-to-run-it)
+- [Outro](#outro-comments)
+
 ## Intro
 
 The `news` database contains newspaper articles, as well as the web server log
