@@ -2,10 +2,10 @@
 
 ## Intro
 
-The `news` database contains newspaper articles, as well as the web server log 
-for the site. The log has a database row for each time a reader loaded a web 
-page. The main idea of the project is to build an *internal reporting tool* 
-that uses information from the database to answer questions about the site's 
+The `news` database contains newspaper articles, as well as the web server log
+for the site. The log has a database row for each time a reader loaded a web
+page. The main idea of the project is to build an *internal reporting tool*
+that uses information from the database to answer questions about the site's
 user activity:
 
 1. What are the most popular three articles of all time?
@@ -43,15 +43,15 @@ The `log` table has the following columns:
 
 ## Implementation of the project
 
-To perform the analysis and answer the questions mentioned in the *Intro* 
-section, specific data from all of the tables are compiled and processed with 
+To perform the analysis and answer the questions mentioned in the *Intro*
+section, specific data from all of the tables are compiled and processed with
 a help of SQL.
 
-`logs_analysis.py` contains the *queries* (SQL statements) to be executed 
-against the database, as well as the *functions* that force the execution and 
+`logs_analysis.py` contains the *queries* (SQL statements) to be executed
+against the database, as well as the *functions* that force the execution and
 present the results in a reader-friendly format.
 
-## Dependencies (built with) 
+## Dependencies (built with)
 
 - [Python 3.7.0](https://www.python.org/downloads/)
 - [PostgreSQL 9.5.13](https://www.postgresql.org/)
@@ -59,23 +59,23 @@ present the results in a reader-friendly format.
 
 ## How to run it
 
-- Make sure **Python** is installed on your computer. Otherwise, download and 
+- Make sure **Python** is installed on your computer. Otherwise, download and
   install *Python 3.7.0* from the download page (see Dependencies above);
 - download and install [Oracle VM Virtual Box](https://www.virtualbox.org/);
 - make sure the CPU Virtualization is enabled;
 - download and install [Vagrant](https://www.vagrantup.com/);
 - download and unzip [VM configuration files](http://bit.ly/2BdmpWt);
-- you should have the *FSND-Virtual-Machine* directory with the *vagrant* 
+- you should have the *FSND-Virtual-Machine* directory with the *vagrant*
   directory inside after the previous step;
-- in your terminal, `cd` to the *vagrant* directory and run the command 
-  `vagrant up` (this causes Vagrant to download the Linux operating system and 
-  install it. It may take quite a while depending on how fast your Internet 
+- in your terminal, `cd` to the *vagrant* directory and run the command
+  `vagrant up` (this causes Vagrant to download the Linux operating system and
+  install it. It may take quite a while depending on how fast your Internet
   connection is);
 - run `vagrant ssh` command to log into the virtual machine;
-- download and unzip the [data](http://bit.ly/2MLVtyd) and put the 
+- download and unzip the [data](http://bit.ly/2MLVtyd) and put the
   *newsdata.sql* file to the *vagrant* directory;
 - in your terminal, run the command `cd /vagrant`;
-- run `psql -d news -f newsdata.sql` to connect to the database server, create 
+- run `psql -d news -f newsdata.sql` to connect to the database server, create
   tables and populating them with data;
 - escape the *psql* mode;
 - download `logs_analysis.py` and put it to the *vagrant* directory;
@@ -83,5 +83,5 @@ present the results in a reader-friendly format.
 
 ## Outro: comments
 
-For more information on the logic of the queries and functions explore the 
+For more information on the logic of the queries and functions explore the
 comments to the `logs_analysis.py`.
